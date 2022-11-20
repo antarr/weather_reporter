@@ -1,0 +1,34 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.open-meteo.com/v1/forecast?current_weather=true&daily%5B%5D=temperature_2m_max&daily%5B%5D=temperature_2m_min&latitude=-87.19463084872731&longitude=34.7825883658917&temperature_unit=fahrenheit&timezone=CST
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 20 Nov 2022 18:46:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYXRpdHVkZSI6LTg3LjI1LCJsb25naXR1ZGUiOjM0Ljc1LCJnZW5lcmF0aW9udGltZV9tcyI6My43MTA5ODUxODM3MTU4MjAzLCJ1dGNfb2Zmc2V0X3NlY29uZHMiOi0yMTYwMCwidGltZXpvbmUiOiJBbWVyaWNhL0NoaWNhZ28iLCJ0aW1lem9uZV9hYmJyZXZpYXRpb24iOiJDU1QiLCJlbGV2YXRpb24iOjI5MzEuMCwiY3VycmVudF93ZWF0aGVyIjp7InRlbXBlcmF0dXJlIjotMzMuNywid2luZHNwZWVkIjoyMS43LCJ3aW5kZGlyZWN0aW9uIjoxNS4wLCJ3ZWF0aGVyY29kZSI6MCwidGltZSI6IjIwMjItMTEtMjBUMTI6MDAifSwiZGFpbHlfdW5pdHMiOnsidGltZSI6Imlzbzg2MDEiLCJ0ZW1wZXJhdHVyZV8ybV9tYXgiOiLCsEYiLCJ0ZW1wZXJhdHVyZV8ybV9taW4iOiLCsEYifSwiZGFpbHkiOnsidGltZSI6WyIyMDIyLTExLTIwIiwiMjAyMi0xMS0yMSIsIjIwMjItMTEtMjIiLCIyMDIyLTExLTIzIiwiMjAyMi0xMS0yNCIsIjIwMjItMTEtMjUiLCIyMDIyLTExLTI2Il0sInRlbXBlcmF0dXJlXzJtX21heCI6Wy0zMy42LC0zMS42LC0yOS40LC0yNy43LC0yOC41LC0zMS43LC0zMC43XSwidGVtcGVyYXR1cmVfMm1fbWluIjpbLTM2LjMsLTM0LjEsLTMyLjMsLTMwLjAsLTMyLjIsLTMyLjgsLTMyLjhdfX0=
+  recorded_at: Sun, 20 Nov 2022 18:46:21 GMT
+recorded_with: VCR 6.1.0
