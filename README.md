@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This is a simple rails application that provides a form for getting the weather forecast for a zip code.
 
 * Ruby version
-
+  * 3.1.2
 * System dependencies
-
-* Configuration
-
+  * Postgresql
 * Database creation
-
+  * `bundle exec rake db:create`
 * Database initialization
-
+  * `bundle exec rake db:migrate`
+* Database seed
+  * `bundle exec rake db:seed`
 * How to run the test suite
+  * `bundle exec rspec spec`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
