@@ -10,13 +10,12 @@ RSpec.describe "Forecasts", type: :request do
     end
   end
 
-  describe "POST /search" do
-    it "returns http success" do
+  describe "POST /index" do
+    it "returns the current forcast" do
       zip = zipcode.zip
-      VCR.use_cassette("request_post_forecast_search") do
-        post "/forecast/search", params: {zip_code: zip}
-        max_temp = JSON.parse(response.body)["max_temp"]
-        expect(max_temp).to eq(-33.6)
+      VCR.use_cassette("request_post_forecast") do
+        post "/forecast/index", params: {zip_code: zip}
+        expect(response.body).to include("The forecast in #{zip} calls for")
       end
     end
   end

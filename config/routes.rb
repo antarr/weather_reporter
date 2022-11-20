@@ -3,6 +3,6 @@
 
 Rails.application.routes.draw do
   get 'forecast/index'
-  post 'forecast/search'
+  post 'forecast/index'
   root 'forecast#index'
 end

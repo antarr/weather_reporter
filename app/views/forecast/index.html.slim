@@ -1,0 +1,33 @@
+.container
+  .h2
+    = @zip_code&.summary || 'No weather data available'
+    ul
+      li
+        .label
+          | Last Updated
+        .value
+          = time_ago_in_words(@zip_code&.cached_at || Time.zone.now)
+      li
+        .label Zip Code
+        .value
+          = @zip_code&.zip
+      li
+        .label
+          | Current Temperature (F)
+        .value
+          #{@zip_code&.current_temperture}
+      li
+        .label
+          | Daily High (F)
+        .value
+          = @zip_code&.max_temp || 'N/A'
+      li
+        .label
+          | Daily Low (F)
+        .value
+          = @zip_code&.min_temp || 'N/A'
+
+.form
+    = form_tag forecast_index_path, method: :post do
+      = text_field_tag :zip_code, params[:zip_code]
+      = submit_tag 'Get Forecast'
